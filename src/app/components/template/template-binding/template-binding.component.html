@@ -1,0 +1,35 @@
+<h2>Templante</h2>
+<h3>Text Interpolation</h3>
+<p>{{ name }} - {{age}}</p>
+<p>{{ condition }}</p>
+
+<hr />
+
+<h2>Property binding</h2>
+<button [disabled]="isDisabled">Button</button>
+
+<hr />
+
+<h2>Attribute binding</h2>
+<p [attr.aria-label]="name">Victor Gonzalez</p>
+
+<hr />
+<h2>Class and Style binding</h2>
+<p [class.background-red]="age>=32" [class.background-blue]="age < 32">
+  {{ name }}
+</p>
+
+<p [style.text-decoration]="isTextDecoration">{{age}}</p>
+
+<hr />
+
+<button (click)="sum()">+</button>
+<button (click)="sub()">+</button>
+
+<input (keydown.shift.t)="onKeyDown($event)"/>
+
+<div
+style="background-color: red; width: 200px; height: 200px; margin-top: 10px;"
+(mousemove)="onMouseMove($event)"
+>
+</div>
